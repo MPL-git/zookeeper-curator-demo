@@ -1,0 +1,21 @@
+server:
+  port: 8087
+
+base:
+  url: 127.0.0.1:${server.port}
+  host: http://${base.url}
+
+
+#swagger开关
+swagger:
+  enable: true
+
+
+zookeeper:
+  curator:
+    ip: 182.254.146.199:2191,182.254.146.199:2192,182.254.146.199:2193
+    sessionTimeOut: 60000
+    sleepMsBetweenRetry: 1000
+    maxRetries: 3
+    namespace: zookeeper-curator-demo
+    connectionTimeoutMs: 30000
